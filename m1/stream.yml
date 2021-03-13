@@ -1,0 +1,15 @@
+database:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: secret
+  url: "jdbc:postgresql://0.0.0.0:5432/postgres"
+
+
+src-topic: "raw-events"
+table: "devices"
+
+applicationId: "device-app"
+
+
+bootstrap.servers: "localhost:29092"
+scheme.registry.url: "http://localhost:8090"

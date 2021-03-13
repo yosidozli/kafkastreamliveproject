@@ -1,0 +1,31 @@
+database:
+  driverClass: org.postgresql.Driver
+  user: postgres
+  password: secret
+  url: "jdbc:postgresql://0.0.0.0:5432/postgres"
+
+server:
+    #  softNofileLimit: 1000
+    #  hardNofileLimit: 1000
+    applicationConnectors:
+      - type: http
+        port: 8010
+      - type: https
+        port: 8443
+        keyStorePath: /Users/Admin/keys/keystore.p12
+        keyStorePassword: yD3521!!
+
+    adminConnectors:
+      - type: http
+        port: 8011
+      - type: https
+        port: 8444
+        keyStorePath: /Users/Admin/keys/keystore.p12
+        keyStorePassword: yD3521!!
+
+topic: "raw-events"
+table: "devices"
+
+kafka:
+    bootstrap.servers: "localhost:29092"
+    schema.registry.url: "http://localhost:8090"

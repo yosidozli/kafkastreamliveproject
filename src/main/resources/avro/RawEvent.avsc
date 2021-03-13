@@ -1,0 +1,19 @@
+{
+  "namespace": "com.yosidozli",
+  "type": "record",
+  "name": "EventRecord",
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "arrival_ts",
+      "type": ["long","null"]
+    },
+    {
+      "name": "bytes",
+      "type": ["bytes","null"]
+    }
+  ]
+}
